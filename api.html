@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_api.css">
+    <title>API Fun</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>This is the project Fun with API</h1>
+            <div class="child">
+                <h2>Enter the Name</h2>
+                <input type="text" id="nameid" name="name" placeholder="Name" /><br>
+                <img src="images.jpg" alt="images.jpg" id="image"/><br>
+                <input type="submit" value="submit" id="submit" onclick="funcation()" >
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#submit').click(function(){
+                let a = $('#nameid').val();
+                let x = 'https://joeschmoe.io/api/v1/'+a;
+               
+                
+                    // alert("ok");
+                   $('#image').attr('src',x);
+        
+                
+                
+           })
+        });
+        
+    </script>
+</body>
+
+</html>
